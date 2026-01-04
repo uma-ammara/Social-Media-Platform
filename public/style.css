@@ -1,0 +1,296 @@
+:root {
+    --primary-color: #1877f2;
+    --background-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #050505;
+    --text-secondary: #65676b;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Auth Pages */
+.auth-container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.auth-container h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #166fe5;
+}
+
+.switch-auth {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.switch-auth a {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Feed */
+.create-post {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.create-post textarea {
+    resize: vertical;
+    min-height: 80px;
+    margin-bottom: 10px;
+}
+
+.post {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ddd;
+    object-fit: cover;
+}
+
+.username {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.username:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.post-content {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.post-actions {
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.95rem;
+}
+
+.action-btn:hover, .action-btn.active {
+    color: var(--primary-color);
+}
+
+/* Comments */
+.comments-section {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.comment-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ddd;
+}
+
+.comment-content {
+    background-color: #f0f2f5;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.comment-author {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 2px;
+}
+
+/* Profile */
+.profile-header {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-info h2 {
+    margin-bottom: 0.5rem;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 1rem 0;
+    color: var(--text-secondary);
+}
+
+.stat-item strong {
+    color: var(--text-color);
+    display: block;
+    font-size: 1.2rem;
+}
+
+.follow-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    width: auto;
+}
+
+.follow-btn.following {
+    background-color: #e4e6eb;
+    color: black;
+}
